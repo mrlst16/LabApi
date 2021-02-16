@@ -24,11 +24,13 @@ namespace LabApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel(x => x.ConfigureEndpoints());
                 });
     }
 
     public static class KestrelServerOptionsExtensions
     {
+        private static List<string> ValidEndpoints = new List<string>() { "localhost", "datingappcore" };
         public static void ConfigureEndpoints(this KestrelServerOptions options)
         {
             var configuration = options.ApplicationServices.GetRequiredService<IConfiguration>();
@@ -45,11 +47,12 @@ namespace LabApi
 
             foreach (var endpoint in endpoints)
             {
+                if (endpoint.Value.Port == 8080) continue;
                 var config = endpoint.Value;
                 var port = config.Port ?? (config.Scheme == "https" ? 443 : 80);
 
                 var ipAddresses = new List<IPAddress>();
-                if (config.Host == "localhost")
+                if (ValidEndpoints.Contains(config.Host))
                 {
                     ipAddresses.Add(IPAddress.IPv6Loopback);
                     ipAddresses.Add(IPAddress.Loopback);
