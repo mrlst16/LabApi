@@ -27,3 +27,4 @@ C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\ref\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.pdb
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.genruntimeconfig.cache
+C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\appsettings.Production.json

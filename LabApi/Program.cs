@@ -107,7 +107,10 @@ namespace LabApi
                 return new X509Certificate2(config.FilePath, config.Password);
             }
 
-            throw new InvalidOperationException("No valid certificate configuration found for the current endpoint.");
+            string errorMessage = $"No valid certificate configuration found for the current endpoint {config.FilePath}{Environment.NewLine}"
+                + $"StoreName: {config.StoreName}{Environment.NewLine}"
+                + $"StoreLocation: {config.StoreLocation}";
+            throw new InvalidOperationException(errorMessage);
         }
     }
 
