@@ -31,9 +31,12 @@ namespace LabApi
 
     public static class KestrelServerOptionsExtensions
     {
-        private static List<string> ValidEndpoints = new List<string>() { "localhost", "datingappcore" };
+        private static List<string> ValidEndpoints;
+
         public static void ConfigureEndpoints(this KestrelServerOptions options)
         {
+            ValidEndpoints = new List<string>() { "datingappcore.com" };
+
             var configuration = options.ApplicationServices.GetRequiredService<IConfiguration>();
             var environment = options.ApplicationServices.GetRequiredService<IHostingEnvironment>();
 
@@ -46,6 +49,7 @@ namespace LabApi
                     return endpoint;
                 });
 
+            Console.WriteLine(JsonConvert.SerializeObject(endpoints, Formatting.Indented));
             foreach (var endpoint in endpoints)
             {
                 Console.WriteLine($"Endpoint: {JsonConvert.SerializeObject(endpoint)}");
@@ -107,6 +111,7 @@ namespace LabApi
 
             if (config.FilePath != null && config.Password != null)
             {
+
                 return new X509Certificate2(config.FilePath, config.Password);
             }
 
