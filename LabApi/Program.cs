@@ -70,7 +70,7 @@ namespace LabApi
 
                 foreach (var address in ipAddresses)
                 {
-                    Console.WriteLine($"Address: {JsonConvert.SerializeObject(address)}");
+                    Console.WriteLine($"Address: {address.ToString()}");
                     options.Listen(address, port,
                         listenOptions =>
                         {
