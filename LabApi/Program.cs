@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +48,7 @@ namespace LabApi
 
             foreach (var endpoint in endpoints)
             {
+                Console.WriteLine($"Endpoint: {JsonConvert.SerializeObject(endpoint)}");
                 if (endpoint.Value.Port == 8080) continue;
                 var config = endpoint.Value;
                 var port = config.Port ?? (config.Scheme == "https" ? 443 : 80);
@@ -68,6 +70,7 @@ namespace LabApi
 
                 foreach (var address in ipAddresses)
                 {
+                    Console.WriteLine($"Address: {JsonConvert.SerializeObject(address)}");
                     options.Listen(address, port,
                         listenOptions =>
                         {
@@ -107,9 +110,8 @@ namespace LabApi
                 return new X509Certificate2(config.FilePath, config.Password);
             }
 
-            string errorMessage = $"No valid certificate configuration found for the current endpoint {config.FilePath}{Environment.NewLine}"
-                + $"StoreName: {config.StoreName}{Environment.NewLine}"
-                + $"StoreLocation: {config.StoreLocation}";
+            string errorMessage = $"No valid certificate configuration found for the current endpoint {Environment.NewLine}"
+                + JsonConvert.SerializeObject(config);
             throw new InvalidOperationException(errorMessage);
         }
     }
