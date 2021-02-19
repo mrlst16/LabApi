@@ -111,7 +111,7 @@ namespace LabApi
 
             if (config.FilePath != null && config.Password != null)
             {
-
+                Console.WriteLine($"Trying to read from : {config.FilePath}, Password: {config.Password}");
                 return new X509Certificate2(config.FilePath, config.Password);
             }
 
