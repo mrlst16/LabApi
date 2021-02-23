@@ -25,7 +25,7 @@ namespace LabApi
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseKestrel(x => x.ConfigureEndpoints());
+                    //webBuilder.UseKestrel(x => x.ConfigureEndpoints());
                 });
     }
 
