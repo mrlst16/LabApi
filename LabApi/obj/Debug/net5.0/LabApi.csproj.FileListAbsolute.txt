@@ -1,5 +1,6 @@
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\appsettings.json
+C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\appsettings.Production.json
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\LabApi.exe
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\LabApi.deps.json
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\LabApi.runtimeconfig.json
@@ -8,10 +9,10 @@ C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\ref\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\LabApi.pdb
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.csprojAssemblyReference.cache
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.AssemblyInfoInputs.cache
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.AssemblyInfo.cs
@@ -27,4 +28,3 @@ C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\ref\LabApi.dll
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.pdb
 C:\Users\matt\Source\Repos\LabApi\LabApi\obj\Debug\net5.0\LabApi.genruntimeconfig.cache
-C:\Users\matt\Source\Repos\LabApi\LabApi\bin\Debug\net5.0\appsettings.Production.json

@@ -2,9 +2,11 @@
 
 namespace LabApi.Controllers
 {
+    [ApiController]
+    [Route("[controller]")]
     public class HomeController : Controller
     {
-        [Route("index")]
+        [HttpGet("index")]
         public IActionResult Index()
         {
             return Json(new { 

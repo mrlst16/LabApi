@@ -27,9 +27,8 @@ namespace LabApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddRouting(options => { 
-                
-            });
+            services.AddRouting();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -51,8 +50,8 @@ namespace LabApi
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
             });
-            //app.UseHttpsRedirection();
 
+            //{controller}/{action}/{id?}
             app.UseRouting();
 
             app.UseAuthorization();
